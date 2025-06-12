@@ -7,27 +7,20 @@ export default function Home() {
       <p>Welcome! Choose an action:</p>
       <ul style={{ listStyle: 'none', padding: 0 }}>
         <li style={{ margin: '10px 0' }}>
-          <Link href="/post-student">
-            <button>Add New Student</button>
-          </Link>
+          <Link href="/post-student"><button>Add New Student</button></Link>
         </li>
         <li style={{ margin: '10px 0' }}>
-          <Link href="/get-students">
-            <button>View All Students</button>
-          </Link>
+          <Link href="/get-students"><button>View All Students</button></Link>
         </li>
         <li style={{ margin: '10px 0' }}>
-          <Link href="/update-students">
-            <button>Update Student Info</button>
-          </Link>
+          <Link href="/update-students"><button>Update Student Info</button></Link>
         </li>
         <li style={{ margin: '10px 0' }}>
-          <Link href="/delete-students">
-            <button>Delete a Student</button>
-          </Link>
+          <Link href="/delete-students"><button>Delete a Student</button></Link>
         </li>
       </ul>
     </div>
   );
 }
+
 

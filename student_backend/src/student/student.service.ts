@@ -7,28 +7,23 @@ import { Student } from './student.entity';
 export class StudentService {
   constructor(
     @InjectRepository(Student)
-    private readonly studentRepo: Repository<Student>,
+    private readonly studentRepo: Repository<Student>, // ✅ Use Repository<Student>
   ) {}
 
-  // CREATE
-  async createStudent(data: Partial<Student>): Promise<Student> {
+  async createStudent(data: Partial<Student>) {
     const student = this.studentRepo.create(data);
     return this.studentRepo.save(student);
   }
 
-  // READ
-  async getAllStudents(): Promise<Student[]> {
+  async getAllStudents() {
     return this.studentRepo.find();
   }
 
-  // UPDATE
-  async updateStudent(id: number, data: Partial<Student>): Promise<any> {
+  async updateStudent(id: number, data: Partial<Student>) {
     return this.studentRepo.update(id, data);
   }
 
-  // DELETE
-  async deleteStudent(id: number): Promise<any> {
+  async deleteStudent(id: number) {
     return this.studentRepo.delete(id);
   }
 }
-
